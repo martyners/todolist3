@@ -2,11 +2,11 @@
     const tasks = [
         {
             content: 'zadanie1',
-            done: 'false',
+            done: false,
         },
         {
             content: 'zadanie2',
-            done: 'true',
+            done: true,
         },
     ];
 
@@ -14,10 +14,10 @@
         let htmlString = '';
         for (const task of tasks) {
             htmlString += `
-            <li>
+            <li${task.done ? ' class="list__listItem--done"' : ''}>
                 ${task.content}
             </li>
-            `
+        `;
         };
         document.querySelector('.js-tasks').innerHTML = htmlString;
     }
