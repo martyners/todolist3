@@ -1,0 +1,19 @@
+.form {
+padding: 20px;
+background-color: white;
+display: flex;
+gap: 20px;
+}
+
+.form__input {
+    border: 1px solid #eee;
+    padding: 10px;
+    flex-grow: 1;
+}
+
+.form__button {
+    color: white;
+    background-color: teal;
+    padding: 10px;
+    border: none;
+}

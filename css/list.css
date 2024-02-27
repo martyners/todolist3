@@ -1,3 +1,38 @@
-.list__listItem--done {
+.list {
+background-color: white;
+list-style: none;
+padding: 20px;
+margin-top: 0;
+}
+
+.list__item {
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list__task {
+flex-grow: 1;
+padding-left: 15px;}
+
+.list__task--done {
     text-decoration: line-through;
 }
+
+.list__button {
+    background-color: green;
+    border: none;
+    color: white;
+    width: 30px;
+    height: 30px;
+}
+
+.list_button--remove {
+    background-color: red;
+    border: none;
+    width: 30px;
+    height: 30px;
+    }

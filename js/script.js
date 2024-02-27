@@ -25,6 +25,7 @@
 
     const toggleTaskDone = (taskIndex) => {
         tasks[taskIndex].done = !tasks[taskIndex].done;
+
         render();
     };
 
@@ -46,10 +47,10 @@
         let htmlString = '';
         for (const task of tasks) {
             htmlString += `
-                <li${task.done ? ' class="list__listItem--done"' : ''}>
-                    <button class="js-done">zrobione?</button>    
-                    ${task.content}
-                   <button class="js-remove">usuń</button>
+                <li class="list__item">
+                    <button class="list__button js-done">${task.done? "&#10003;" : ""}</button>    
+                    <span class="list__task${task.done ? ' list__task--done' : ''}">${task.content}</span>
+                   <button class="list_button--remove js-remove">&#128465;</button>
                 </li>
             `;
         };
@@ -66,6 +67,7 @@
                 return;
             }
             addNewTask(newTaskContent);
+            
     }
     
     
