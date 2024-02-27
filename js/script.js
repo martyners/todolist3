@@ -9,6 +9,12 @@
             done: true,
         },
     ];
+
+    const clearInputAndFocus = () => {
+        const inputTask = document.querySelector(".js-newTask");
+        inputTask.value = "";
+        inputTask.focus(); 
+    }
     
     const addNewTask = (newTaskContent) => {
         tasks.push({
@@ -16,6 +22,8 @@
             done: false,
         });
         render();
+
+        clearInputAndFocus();
     }
 
     const removeTask = (taskIndex) => {
